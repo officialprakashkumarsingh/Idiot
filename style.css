@@ -1,0 +1,65 @@
+:root {
+  --bg: #111;
+  --fg: #eee;
+  --accent: #0f0;
+  --btn: #222;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: system-ui, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+h1 {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+canvas {
+  background: var(--bg);
+  border: 2px solid var(--accent);
+  width: 90vmin;
+  height: 90vmin;
+  max-width: 400px;
+  max-height: 400px;
+  image-rendering: pixelated;
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  margin-top: 1rem;
+  width: 90vmin;
+  max-width: 400px;
+}
+
+button {
+  touch-action: manipulation;
+  background: var(--btn);
+  color: var(--fg);
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 2rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+button:active {
+  background: var(--accent);
+  color: var(--bg);
+}
